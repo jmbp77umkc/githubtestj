@@ -14,8 +14,8 @@ public class Githubtestj {
         boolean quit = false;
 
         while(!quit) {
-            System.out.print("A/U/R/L/C/Q: ");
-    //        System.out.print("I don't know what's happening aaaaaaaaaaaaaaaaaaaaaa: ");
+//            System.out.print("A/U/R/L/C/Q: ");
+            System.out.print("I don't know what's happening aaaaaaaaaaaaaaaaaaaaaa: ");
             input = System.console().readLine();
             switch (input.charAt(0)) {
                 case 'A':
