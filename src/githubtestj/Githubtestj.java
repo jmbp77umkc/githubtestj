@@ -1,5 +1,8 @@
 package githubtestj;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Stack;
@@ -7,7 +10,9 @@ import java.util.Stack;
 
 public class Githubtestj {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        
         LinkedList<String> actions = new LinkedList<>();
         Stack<String> redostack = new Stack<>();
         String input;
@@ -16,12 +21,12 @@ public class Githubtestj {
         while(!quit) {
 //            System.out.print("A/U/R/L/C/Q: ");
             System.out.print("I don't know what's happening aaaaaaaaaaaaaaaaaaaaaa: ");
-            input = System.console().readLine();
+            input = read.readLine();
             switch (input.charAt(0)) {
                 case 'A':
                 case 'a':
                     System.out.print("Action: ");
-                    input = System.console().readLine();
+                    input = read.readLine();
                     actions.addLast(input);
                     redostack.clear();
                     break;
